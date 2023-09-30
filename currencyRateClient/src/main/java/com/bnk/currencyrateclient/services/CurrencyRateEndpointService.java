@@ -18,7 +18,6 @@ public class CurrencyRateEndpointService {
     public CurrencyRateEndpointService(Map<String, RateClient> clients) {
         this.clients = clients;
     }
-
     public CurrencyRate getCurrencyRate(RateType rateType, String currency, LocalDate date) {
         log.info("getCurrencyRate. rateType:{}, currency:{}, date:{}", rateType, currency, date);
         RateClient rateClient = clients.get(rateType.getServiceName());
