@@ -1,0 +1,22 @@
+server:
+  port: 8081
+
+management:
+  server:
+    port: 8091
+  endpoints:
+    enabled-by-default: false
+  endpoint:
+    health:
+      enabled: true
+      probes:
+        enabled: true
+
+cbr:
+  url: "https://cbr.ru/scripts/XML_daily.asp"
+app:
+  cache:
+    size: 365
+  rest:
+    api:
+      prefix: /api
